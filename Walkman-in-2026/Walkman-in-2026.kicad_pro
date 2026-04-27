@@ -506,10 +506,14 @@
   },
   "pcbnew": {
     "last_paths": {
+      "gencad": "",
       "idf": "",
       "netlist": "",
       "plot": "",
+      "pos_files": "",
       "specctra_dsn": "",
+      "step": "",
+      "svg": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -632,7 +636,7 @@
         "uuid": "bcf458fb-73b4-4353-ab3e-e29672950909"
       }
     ],
-    "used_designators": "#PWR24-25,#PWR28-43,Q1-2,R7-13,C1-6",
+    "used_designators": "C7-10,#PWR25,#PWR27,#PWR44-47",
     "variants": []
   },
   "sheets": [
