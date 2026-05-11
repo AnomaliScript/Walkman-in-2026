@@ -4300,18 +4300,18 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -0 -0 -0)
 			)
 		)
 		(model "${KIPRJMOD}/Additional Footprints/easyeda2kicad/easyeda2kicad.3dshapes/LCD1602.step"
 			(offset
-				(xyz 0 0 0)
+				(xyz 0 0 10.9)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -0 -0 -0)
 			)
 		)
 	)
@@ -9595,7 +9595,7 @@
 		(model "${KIPRJMOD}/3d models/Same_Sky_SJ1-3513N.step"
 			(opacity 0.5200)
 			(offset
-				(xyz 5.3 0 0)
+				(xyz 5.3 0 2.5)
 			)
 			(scale
 				(xyz 1 1 1)
@@ -10471,14 +10471,6 @@
 		(uuid "7402daa4-ead2-48d6-aab9-d1ba64a4e806")
 	)
 	(segment
-		(start 197.5 100.4)
-		(end 197 99.9)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "GND")
-		(uuid "763911c5-3603-4adb-81ac-ba5ca0b80695")
-	)
-	(segment
 		(start 194.748529 98.1)
 		(end 194.251471 98.1)
 		(width 0.2)
@@ -10541,6 +10533,14 @@
 		(layer "F.Cu")
 		(net "GND")
 		(uuid "8f235e57-6421-4ac9-b07c-6ddc9dcaa648")
+	)
+	(segment
+		(start 197 100.4)
+		(end 197.5 100.4)
+		(width 0.2)
+		(layer "F.Cu")
+		(net "GND")
+		(uuid "90ad4ba6-171b-4b85-a8c3-31a877d99cac")
 	)
 	(segment
 		(start 164 110.5)
@@ -10613,6 +10613,14 @@
 		(layer "F.Cu")
 		(net "GND")
 		(uuid "aec8fdb4-a3c7-4e26-b9ee-e84412062dd2")
+	)
+	(segment
+		(start 197 100.4)
+		(end 197 96.5)
+		(width 0.2)
+		(layer "F.Cu")
+		(net "GND")
+		(uuid "b01293d6-843c-49e5-bad3-6834d9e730a1")
 	)
 	(segment
 		(start 188.56 99.06)
@@ -10776,7 +10784,7 @@
 	)
 	(segment
 		(start 194.74 100.4)
-		(end 197.5 100.4)
+		(end 197 100.4)
 		(width 0.2)
 		(layer "F.Cu")
 		(net "GND")
@@ -10869,14 +10877,6 @@
 		(layer "F.Cu")
 		(net "GND")
 		(uuid "f2afc2ac-76f1-4635-b5e0-1a4d8a6e1738")
-	)
-	(segment
-		(start 197 99.9)
-		(end 197 96.5)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "GND")
-		(uuid "f37163f4-0f8c-46b7-b1e4-f9d48b163cd4")
 	)
 	(segment
 		(start 206.5 94)
