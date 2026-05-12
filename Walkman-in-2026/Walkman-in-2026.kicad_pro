@@ -632,7 +632,7 @@
         "uuid": "bcf458fb-73b4-4353-ab3e-e29672950909"
       }
     ],
-    "used_designators": "U5",
+    "used_designators": "U5,#PWR10,#PWR16-17,#PWR20-21,BT1,TP1,J3-4",
     "variants": []
   },
   "sheets": [
