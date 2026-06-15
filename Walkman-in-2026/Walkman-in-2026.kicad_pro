@@ -98,8 +98,8 @@
         "padstack": "warning",
         "pth_inside_courtyard": "error",
         "shorting_items": "error",
-        "silk_edge_clearance": "warning",
-        "silk_over_copper": "warning",
+        "silk_edge_clearance": "ignore",
+        "silk_over_copper": "ignore",
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
@@ -680,7 +680,7 @@
         "uuid": "bcf458fb-73b4-4353-ab3e-e29672950909"
       }
     ],
-    "used_designators": "SW7,J1",
+    "used_designators": "U2,#PWR27,#PWR35",
     "variants": []
   },
   "sheets": [

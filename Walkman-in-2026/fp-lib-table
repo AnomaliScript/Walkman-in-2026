@@ -4,4 +4,6 @@
 	(lib (name "EasyEDALibrary") (type "KiCad") (uri "${KIPRJMOD}/Additional Footprints/easyeda2kicad/easyeda2kicad.pretty") (options "") (descr ""))
 	(lib (name "More_XIAO_Series_Footprints") (type "KiCad") (uri "${KIPRJMOD}/Additional Footprints/New_XIAO_Series_Footprints.pretty") (options "") (descr ""))
 	(lib (name "easyeda2kicad") (type "KiCad") (uri "C:/Users/anoma/Documents/KiCad/easyeda2kicad/easyeda2kicad.pretty") (options "") (descr ""))
+	(lib (name "PCF x LCD combo") (type "KiCad") (uri "${KIPRJMOD}/Additional Footprints/PCF x LCD combo.pretty") (options "") (descr ""))
+	(lib (name "Amazon_PCM") (type "KiCad") (uri "${KIPRJMOD}/Additional Footprints/Amazon_PCM.pretty") (options "") (descr ""))
 )

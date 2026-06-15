@@ -3,4 +3,5 @@
 	(lib (name "More XIAO") (type "KiCad") (uri "${KIPRJMOD}/Library/Seeed Studio XIAO Series Library") (options "") (descr ""))
 	(lib (name "easyeda2kicad") (type "KiCad") (uri "${EASYEDA2KICAD}/easyeda2kicad.kicad_sym") (options "") (descr ""))
 	(lib (name "Amazon _PCM") (type "KiCad") (uri "${KIPRJMOD}/Amazon _PCM.kicad_sym") (options "") (descr ""))
+	(lib (name "LCD1602_PCF8574_combo") (type "KiCad") (uri "${KIPRJMOD}/LCD1602_PCF8574_combo.kicad_sym") (options "") (descr ""))
 )
