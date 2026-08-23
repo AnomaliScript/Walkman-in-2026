@@ -95,5 +95,25 @@ I utilized my 3D printer to print simplified versions of my PCB to check the foo
 | 8 | [Right-Angle Switches](https://www.lcsc.com/product-detail/C49101620.html?spm=wm.ddx.0.xqy___wm.ddl.ddb.0.ddh&lcsc_vid=ElUPAwcDQFlaVF0HQ1dXAwFXFVNbUVFeQFIPBQIHQgQxVlNeR1FZVVVQR1laVTsOAxUeFF5JWBYZEEoKFBINSQcJGk4NBhADEA4cHktSR1RADxALGw%3D%3D) | LCSC | 50 | $0.63 |
 | X | X | X | X | ~$81 |
 
-## Assembly
-Coming soon! (Please don't make me order another JLCPCB T-T)
+## Additional supplies
+
+I started to get soldering supplies by asking my friend's dad for some, to which he responded with a simple roll of solder and an okay soldering iron.  This worked out fine for the simpler components, but when it came to more complex soldering assemblies such as SMD components, I needed help.
+After some discussion with by more-experienced friend, he told me that I needed a pack of liquid/solid flux (just in case if the rosin-core solder didn't have enough), a heatbed for the SMD components, and some solder paste to complement the heatbed for easier soldering for SMD components.
+| Id      | Name    | Vendor  | Qty     | Cost |
+| --- | --- | --- | --- | --- |
+| 1 | [Heatbed](https://www.amazon.com/Soldering-Microcomputer-Technicians-Electronics-Enthusiasts/dp/B0G443BG4X/ref=sr_1_2?sr=8-2) | Amazon | 1 | $27 |
+| 2 | [Flux](https://www.amazon.com/SRA-Soldering-Electronics-Lead-Free-Electrical/dp/B008ZIV85A/ref=sr_1_6?crid=3PSC9N7K6VI1P&dib=eyJ2IjoiMSJ9.4lAJRvPbs-mZfOjdNN3yko1QdCRJ7DuF7ITQXP00Zw6-YTXEtz6O56z-3mFeA06DFWn7K46TQMWEEocoB24hUeA2pRWL5PZLodoffU67bT22aAduVxkx_wdd-4mv4hNAZPr-tqz4AYCK0zWmtre61fzN7fRagjiYjk4f0m6PkqVZ_U-DropUBjAUAZUFRuWYf_Zg6Ls1t9Iee1CwaPx7wRCERDrgLYxmO5XsuhNiYI31TFE8GYnA0AEQibicbohzDRZsgtbbjuhwPmBq9184HANk6QaEDnCSlJgSGyVij_4.RXMTRwdvJQXcmnfBtIILk3Vw2HaX5XoBBaaOHqvCQDs&dib_tag=se&keywords=solder+flux&qid=1787439264&sprefix=solder+flu%2Caps%2C151&sr=8-6) | Amazon | 1 | $9 |
+| 3 | [Solder Paste](https://www.amazon.com/Particle-Melting-Electronics-Welding-100G/dp/B0FYH9HS2W/ref=sr_1_24?crid=1XXM8RE6MJU3V&dib=eyJ2IjoiMSJ9.RM36QPd0a2H4_bdhGSOKfZJjHoW4TT7FYbYOePXYuUSKFAHb8I43R-8Ku84GS6KqnE81AwtSetvDehl8jUrOpetkE9Lp1e0oAUrra1Ax1yHaP54gxSOjCNy8Qae3zJZ3lqb1vRmu-jv4T_6l-unRR69yQe7E2hoBbOXNDQxANlSyCc-yngeB1UcluzowntyGix_HBKZ0-sbckXMkqIkEe25zazsldICJT3-jejK2Nnjor7P6o3duiNHdLID88EolUzPUfiM_pN3laRQF3XeSDC66AEbr2nc3RMiYHQiKlFM.QaV3XLYiIFU6J7uR8jqXOCL1FU7gVYKlh0sjLuVEvP0&dib_tag=se&keywords=solder+paste&qid=1787439314&sprefix=solder+pas%2Caps%2C222&sr=8-24) | Amazon | 1 | $22 |
+
+After getting these components, I set up shop in my garage, and I opened the garage door so that the yummy lead fumes could escape.  However, I got moved to my back patio after my dad complained after a bunch of bugs came it in from the open garage door.
+
+Finally, after having done most of the soldering to enable theoretical functionality for my Walkman, I tried hooking it up to my computer using a Logi USB-C cable, and after some vibecoding with Claude Opus, I got the Walkman to work...partially.  The display was a little off, and no matter how many times I unplugged and replugged my earbuds, I still couldn't hear anything from the Walkman.  Thankfully, the microSD card reader was working, as well as the LCD after some adjustment, because I saw it displaying the text of the songs that I had loaded onto the microSD card.
+
+Switching out my earbuds for headphones that I usually use, I was finally able to hear the music that was playing!
+<img width="2160" height="2880" alt="image_2" src="https://github.com/user-attachments/assets/d85f2e68-401e-4ce1-a042-2031f7e108c1" />
+<img width="2880" height="2160" alt="image" src="https://github.com/user-attachments/assets/83144d3e-38c6-4d2d-a16f-798502de3260" />
+
+However, the battery still needed to be implemented into the Walkman PCB, and I soon realized that the V1.0 Walkman PCB wouldn't be able to distribute the LiPo battery's power to all the peripherals on the PCB.  This was because I wired the AudioJack, LCD display, and all the other peripherals other than the microSD card to all use VBUS (5V) power instead of 3.3V power.  The problem lied in how the 3.3V pin, not the VBUS pin, was the only power distributor when the Walkman is disconnected from the XIAO's USB-C's power source.
+
+## V2.0 
+With the LiPo power distribution not working and the LCD screen not being entirely accurate to Makoto's Walkman in Persona 3, I returned to the drawing board that is KiCad.  By working with Claude, I found another [LCD screen](https://newhavendisplay.com/2x20-character-lcd-stn-gray-display-with-side-white-backlight-and-pin-header-3v/) online that looked more similar to Makoto's Walkman screen.  Looking at its datasheet, I tried adding it into my Walkman PCB schematic.
